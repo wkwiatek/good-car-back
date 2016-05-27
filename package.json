@@ -1,0 +1,31 @@
+{
+  "name": "good-car-back",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "standard | standard-reporter --stylish && node src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wkwiatek/good-car-back.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wkwiatek/good-car-back/issues"
+  },
+  "homepage": "https://github.com/wkwiatek/good-car-back#readme",
+  "dependencies": {
+    "boom": "^3.2.1",
+    "cheerio": "^0.20.0",
+    "hapi": "^13.4.1",
+    "hapi-mongodb": "^6.0.0",
+    "joi": "^8.1.1",
+    "request": "^2.72.0"
+  },
+  "devDependencies": {
+    "standard": "^7.1.1",
+    "standard-reporter": "^1.0.5"
+  }
+}
