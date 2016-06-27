@@ -127,8 +127,14 @@ server.route([{
     handler: (request, reply) => {
       const db = request.server.plugins['hapi-mongodb'].db
       const ObjectID = request.server.plugins['hapi-mongodb'].ObjectID
+      let _id
+      try {
+        _id = new ObjectID(request.params.id)
+      } catch (err) {
+        return reply(Boom.badRequest('Invalid ObjectID error', err))
+      }
 
-      db.collection('offers').findOne({ _id: new ObjectID(request.params.id) }, (err, result) => {
+      db.collection('offers').findOne({ _id }, (err, result) => {
         if (err) {
           return reply(Boom.internal('Internal MongoDB error', err))
         }
