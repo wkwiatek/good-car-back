@@ -4,6 +4,8 @@
   "description": "",
   "main": "src/index.js",
   "scripts": {
+    "deploy": "./deploy.sh",
+    "prestart": "npm install",
     "start": "standard | standard-reporter --stylish && node src/index.js"
   },
   "repository": {
