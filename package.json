@@ -6,7 +6,8 @@
   "scripts": {
     "deploy": "./deploy.sh",
     "prestart": "npm install",
-    "start": "standard | standard-reporter --stylish && node src/index.js"
+    "start": "standard | standard-reporter --stylish && node src/index.js",
+    "test": "echo \"Warning: no test specified\" && exit 0"
   },
   "repository": {
     "type": "git",

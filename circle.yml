@@ -1,0 +1,16 @@
+machine:
+  node:
+    version: "6.0.0"
+  environment:
+    KARMA_ENV: "production"
+    WEBPACK_ENV: "production"
+
+test:
+  override:
+    - npm run test
+
+deployment:
+  production:
+    branch: master
+    commands:
+      - npm run deploy
