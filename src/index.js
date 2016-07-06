@@ -25,8 +25,9 @@ server.route([{
   config: {
     handler: (request, reply) => {
       const db = request.server.plugins['hapi-mongodb'].db
+      const url = addHttpIfNeeded(request.payload.url)
       const doc = {
-        url: request.payload.url
+        url
       }
       db.collection('offers').findOne(doc, (err, result) => {
         if (err) {
@@ -156,3 +157,10 @@ server.register({
 
   server.start(() => console.log('Server started at:', server.info.uri))
 })
+
+function addHttpIfNeeded (url) {
+  if (!/^(?:f|ht)tps?\:\/\//.test(url)) {
+    return `http://${url}`
+  }
+  return url
+}
