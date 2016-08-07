@@ -23,6 +23,7 @@
     "boom": "^3.2.1",
     "cheerio": "^0.20.0",
     "hapi": "^13.4.1",
+    "hapi-auth-jwt": "^4.0.0",
     "hapi-mongodb": "^6.0.0",
     "joi": "^8.1.1",
     "request": "^2.72.0"
